@@ -125,24 +125,26 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin\form_main_admin.Designer.vb">
-      <DependentUpon>form_main_admin.vb</DependentUpon>
+    <Compile Include="admin\form_changePassword.Designer.vb">
+      <DependentUpon>form_changePassword.vb</DependentUpon>
     </Compile>
-    <Compile Include="admin\form_main_admin.vb">
+    <Compile Include="admin\form_changePassword.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="admin\form_manage_user.Designer.vb">
-      <DependentUpon>form_manage_user.vb</DependentUpon>
+    <Compile Include="admin\form_main_admin.Designer.vb">
+      <DependentUpon>form_mainAdmin.vb</DependentUpon>
     </Compile>
-    <Compile Include="admin\form_manage_user.vb">
+    <Compile Include="admin\form_mainAdmin.vb" />
+    <Compile Include="admin\form_manageUser.Designer.vb">
+      <DependentUpon>form_manageUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\form_manageUser.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="cashier\form_main_cashier.Designer.vb">
-      <DependentUpon>form_main_cashier.vb</DependentUpon>
+      <DependentUpon>form_mainCashier.vb</DependentUpon>
     </Compile>
-    <Compile Include="cashier\form_main_cashier.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="cashier\form_mainCashier.vb" />
     <Compile Include="dbconnection.vb" />
     <Compile Include="form_login.vb">
       <SubType>Form</SubType>
@@ -170,10 +172,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="admin\form_main_admin.resx">
-      <DependentUpon>form_main_admin.vb</DependentUpon>
+      <DependentUpon>form_mainAdmin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="admin\form_manage_user.resx">
-      <DependentUpon>form_manage_user.vb</DependentUpon>
+    <EmbeddedResource Include="admin\form_manageUser.resx">
+      <DependentUpon>form_manageUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form_login.resx">
       <DependentUpon>form_login.vb</DependentUpon>

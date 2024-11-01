@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class form_main_cashier
+Partial Class form_mainCashier
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.

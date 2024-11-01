@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class form_manage_user
+Public Class form_manageUser
     Private Sub form_manage_user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dbconn()
     End Sub
@@ -13,7 +13,7 @@ Public Class form_manage_user
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
-        form_main_admin.Show()
+        form_mainAdmin.Show()
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click

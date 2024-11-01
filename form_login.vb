@@ -48,10 +48,10 @@ Public Class form_login
                 Else
                     If UCase(role) = "ADMIN" Then
                         Me.Hide()
-                        form_main_admin.Show()
+                        form_mainAdmin.Show()
                     ElseIf UCase(role) = "CASHIER" Then
                         Me.Hide()
-                        form_main_cashier.Show()
+                        form_mainCashier.Show()
                     End If
                 End If
             Else
