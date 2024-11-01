@@ -10,7 +10,7 @@ Module dbconnection
     Public Function dbconn() As Boolean
         Try
             If conn.State = ConnectionState.Closed Then
-                conn.ConnectionString = "server=localhost;username=root;password=;port=3306;database=dp_pos"
+                conn.ConnectionString = "server=localhost;username=root;password=;port=3306;database=db_pos"
                 result = True
             End If
         Catch ex As Exception

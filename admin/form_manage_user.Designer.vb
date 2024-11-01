@@ -96,33 +96,37 @@ Partial Class form_manage_user
         'lblName
         '
         Me.lblName.AutoSize = True
+        Me.lblName.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblName.Location = New System.Drawing.Point(52, 38)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(43, 17)
+        Me.lblName.Size = New System.Drawing.Size(44, 17)
         Me.lblName.TabIndex = 6
         Me.lblName.Text = "Name"
         '
         'lblUsername
         '
         Me.lblUsername.AutoSize = True
+        Me.lblUsername.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername.Location = New System.Drawing.Point(37, 90)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(67, 17)
+        Me.lblUsername.Size = New System.Drawing.Size(69, 17)
         Me.lblUsername.TabIndex = 7
         Me.lblUsername.Text = "Username"
         '
         'lblPassword
         '
         Me.lblPassword.AutoSize = True
+        Me.lblPassword.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.Location = New System.Drawing.Point(40, 146)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(64, 17)
+        Me.lblPassword.Size = New System.Drawing.Size(66, 17)
         Me.lblPassword.TabIndex = 8
         Me.lblPassword.Text = "Password"
         '
         'lblRole
         '
         Me.lblRole.AutoSize = True
+        Me.lblRole.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRole.Location = New System.Drawing.Point(61, 198)
         Me.lblRole.Name = "lblRole"
         Me.lblRole.Size = New System.Drawing.Size(34, 17)
@@ -146,7 +150,7 @@ Partial Class form_manage_user
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.txtName)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "form_manage_user"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Manage User"
