@@ -59,7 +59,7 @@ Partial Class form_manage_user
         'cmbRole
         '
         Me.cmbRole.FormattingEnabled = True
-        Me.cmbRole.Items.AddRange(New Object() {"Admin", "Cashier"})
+        Me.cmbRole.Items.AddRange(New Object() {"ADMIN", "CASHIER"})
         Me.cmbRole.Location = New System.Drawing.Point(114, 190)
         Me.cmbRole.Name = "cmbRole"
         Me.cmbRole.Size = New System.Drawing.Size(379, 25)
