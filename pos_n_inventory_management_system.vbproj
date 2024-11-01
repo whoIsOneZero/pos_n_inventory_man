@@ -171,6 +171,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="admin\form_changePassword.resx">
+      <DependentUpon>form_changePassword.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin\form_main_admin.resx">
       <DependentUpon>form_mainAdmin.vb</DependentUpon>
     </EmbeddedResource>
