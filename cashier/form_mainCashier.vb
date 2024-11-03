@@ -1,3 +1,3 @@
-﻿Public Class form_main_cashier
+﻿Public Class form_mainCashier
 
 End Class

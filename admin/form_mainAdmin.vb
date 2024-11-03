@@ -1,3 +1,3 @@
-﻿Public Class form_main_admin
+﻿Public Class form_mainAdmin
 
 End Class

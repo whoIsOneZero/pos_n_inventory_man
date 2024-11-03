@@ -131,20 +131,24 @@
     <Compile Include="admin\form_changePassword.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="admin\form_main_admin.Designer.vb">
+    <Compile Include="admin\form_mainAdmin.Designer.vb">
       <DependentUpon>form_mainAdmin.vb</DependentUpon>
     </Compile>
-    <Compile Include="admin\form_mainAdmin.vb" />
+    <Compile Include="admin\form_mainAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="admin\form_manageUser.Designer.vb">
       <DependentUpon>form_manageUser.vb</DependentUpon>
     </Compile>
     <Compile Include="admin\form_manageUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cashier\form_main_cashier.Designer.vb">
+    <Compile Include="cashier\form_mainCashier.Designer.vb">
       <DependentUpon>form_mainCashier.vb</DependentUpon>
     </Compile>
-    <Compile Include="cashier\form_mainCashier.vb" />
+    <Compile Include="cashier\form_mainCashier.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dbconnection.vb" />
     <Compile Include="form_login.vb">
       <SubType>Form</SubType>
@@ -173,9 +177,6 @@
   <ItemGroup>
     <EmbeddedResource Include="admin\form_changePassword.resx">
       <DependentUpon>form_changePassword.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="admin\form_main_admin.resx">
-      <DependentUpon>form_mainAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin\form_manageUser.resx">
       <DependentUpon>form_manageUser.vb</DependentUpon>
