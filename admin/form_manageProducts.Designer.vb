@@ -22,7 +22,7 @@ Partial Class form_manageProducts
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tab_productList = New System.Windows.Forms.TabPage()
@@ -60,6 +60,11 @@ Partial Class form_manageProducts
         Me.lbl_tax = New System.Windows.Forms.Label()
         Me.lbl_totalPrice = New System.Windows.Forms.Label()
         Me.lbl_barcode = New System.Windows.Forms.Label()
+        Me.btn_search = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.tab_productList.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,14 +113,14 @@ Partial Class form_manageProducts
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column6, Me.Column7, Me.Column10, Me.Column11, Me.Column12, Me.Column8, Me.Column9})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(3, 56)
         Me.DataGridView1.Name = "DataGridView1"
@@ -223,6 +228,11 @@ Partial Class form_manageProducts
         '
         'tab_manageProducts
         '
+        Me.tab_manageProducts.Controls.Add(Me.Button4)
+        Me.tab_manageProducts.Controls.Add(Me.Button3)
+        Me.tab_manageProducts.Controls.Add(Me.Button2)
+        Me.tab_manageProducts.Controls.Add(Me.Button1)
+        Me.tab_manageProducts.Controls.Add(Me.btn_search)
         Me.tab_manageProducts.Controls.Add(Me.lbl_barcode)
         Me.tab_manageProducts.Controls.Add(Me.lbl_totalPrice)
         Me.tab_manageProducts.Controls.Add(Me.lbl_tax)
@@ -254,7 +264,7 @@ Partial Class form_manageProducts
         '
         'txt_totalPrice
         '
-        Me.txt_totalPrice.Location = New System.Drawing.Point(429, 194)
+        Me.txt_totalPrice.Location = New System.Drawing.Point(388, 178)
         Me.txt_totalPrice.Name = "txt_totalPrice"
         Me.txt_totalPrice.Size = New System.Drawing.Size(270, 25)
         Me.txt_totalPrice.TabIndex = 7
@@ -262,7 +272,7 @@ Partial Class form_manageProducts
         'cmb_tax
         '
         Me.cmb_tax.FormattingEnabled = True
-        Me.cmb_tax.Location = New System.Drawing.Point(429, 142)
+        Me.cmb_tax.Location = New System.Drawing.Point(388, 126)
         Me.cmb_tax.Name = "cmb_tax"
         Me.cmb_tax.Size = New System.Drawing.Size(270, 25)
         Me.cmb_tax.TabIndex = 6
@@ -270,7 +280,7 @@ Partial Class form_manageProducts
         'cmb_UOM
         '
         Me.cmb_UOM.FormattingEnabled = True
-        Me.cmb_UOM.Location = New System.Drawing.Point(82, 243)
+        Me.cmb_UOM.Location = New System.Drawing.Point(82, 227)
         Me.cmb_UOM.Name = "cmb_UOM"
         Me.cmb_UOM.Size = New System.Drawing.Size(270, 25)
         Me.cmb_UOM.TabIndex = 5
@@ -278,35 +288,35 @@ Partial Class form_manageProducts
         'cmb_proGroup
         '
         Me.cmb_proGroup.FormattingEnabled = True
-        Me.cmb_proGroup.Location = New System.Drawing.Point(82, 194)
+        Me.cmb_proGroup.Location = New System.Drawing.Point(82, 178)
         Me.cmb_proGroup.Name = "cmb_proGroup"
         Me.cmb_proGroup.Size = New System.Drawing.Size(270, 25)
         Me.cmb_proGroup.TabIndex = 4
         '
         'txt_proName
         '
-        Me.txt_proName.Location = New System.Drawing.Point(82, 142)
+        Me.txt_proName.Location = New System.Drawing.Point(82, 126)
         Me.txt_proName.Name = "txt_proName"
         Me.txt_proName.Size = New System.Drawing.Size(270, 25)
         Me.txt_proName.TabIndex = 3
         '
         'txt_location
         '
-        Me.txt_location.Location = New System.Drawing.Point(82, 295)
+        Me.txt_location.Location = New System.Drawing.Point(82, 279)
         Me.txt_location.Name = "txt_location"
         Me.txt_location.Size = New System.Drawing.Size(270, 25)
         Me.txt_location.TabIndex = 2
         '
         'txt_Price
         '
-        Me.txt_Price.Location = New System.Drawing.Point(429, 95)
+        Me.txt_Price.Location = New System.Drawing.Point(388, 79)
         Me.txt_Price.Name = "txt_Price"
         Me.txt_Price.Size = New System.Drawing.Size(270, 25)
         Me.txt_Price.TabIndex = 1
         '
         'txt_proCode
         '
-        Me.txt_proCode.Location = New System.Drawing.Point(82, 95)
+        Me.txt_proCode.Location = New System.Drawing.Point(82, 79)
         Me.txt_proCode.Name = "txt_proCode"
         Me.txt_proCode.Size = New System.Drawing.Size(270, 25)
         Me.txt_proCode.TabIndex = 0
@@ -314,7 +324,7 @@ Partial Class form_manageProducts
         'picBox_barcode
         '
         Me.picBox_barcode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.picBox_barcode.Location = New System.Drawing.Point(429, 243)
+        Me.picBox_barcode.Location = New System.Drawing.Point(388, 227)
         Me.picBox_barcode.Name = "picBox_barcode"
         Me.picBox_barcode.Size = New System.Drawing.Size(270, 77)
         Me.picBox_barcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -323,15 +333,15 @@ Partial Class form_manageProducts
         '
         'txt_searchProCode
         '
-        Me.txt_searchProCode.Location = New System.Drawing.Point(82, 46)
+        Me.txt_searchProCode.Location = New System.Drawing.Point(82, 30)
         Me.txt_searchProCode.Name = "txt_searchProCode"
-        Me.txt_searchProCode.Size = New System.Drawing.Size(270, 25)
+        Me.txt_searchProCode.Size = New System.Drawing.Size(472, 25)
         Me.txt_searchProCode.TabIndex = 9
         '
         'lbl_searchProCode
         '
         Me.lbl_searchProCode.AutoSize = True
-        Me.lbl_searchProCode.Location = New System.Drawing.Point(79, 26)
+        Me.lbl_searchProCode.Location = New System.Drawing.Point(79, 10)
         Me.lbl_searchProCode.Name = "lbl_searchProCode"
         Me.lbl_searchProCode.Size = New System.Drawing.Size(135, 17)
         Me.lbl_searchProCode.TabIndex = 10
@@ -340,7 +350,7 @@ Partial Class form_manageProducts
         'lbl_proCode
         '
         Me.lbl_proCode.AutoSize = True
-        Me.lbl_proCode.Location = New System.Drawing.Point(79, 75)
+        Me.lbl_proCode.Location = New System.Drawing.Point(79, 59)
         Me.lbl_proCode.Name = "lbl_proCode"
         Me.lbl_proCode.Size = New System.Drawing.Size(91, 17)
         Me.lbl_proCode.TabIndex = 11
@@ -349,7 +359,7 @@ Partial Class form_manageProducts
         'lbl_proName
         '
         Me.lbl_proName.AutoSize = True
-        Me.lbl_proName.Location = New System.Drawing.Point(79, 122)
+        Me.lbl_proName.Location = New System.Drawing.Point(79, 106)
         Me.lbl_proName.Name = "lbl_proName"
         Me.lbl_proName.Size = New System.Drawing.Size(96, 17)
         Me.lbl_proName.TabIndex = 12
@@ -358,7 +368,7 @@ Partial Class form_manageProducts
         'lbl_proGroup
         '
         Me.lbl_proGroup.AutoSize = True
-        Me.lbl_proGroup.Location = New System.Drawing.Point(79, 170)
+        Me.lbl_proGroup.Location = New System.Drawing.Point(79, 154)
         Me.lbl_proGroup.Name = "lbl_proGroup"
         Me.lbl_proGroup.Size = New System.Drawing.Size(98, 17)
         Me.lbl_proGroup.TabIndex = 13
@@ -367,7 +377,7 @@ Partial Class form_manageProducts
         'lbl_UOM
         '
         Me.lbl_UOM.AutoSize = True
-        Me.lbl_UOM.Location = New System.Drawing.Point(79, 222)
+        Me.lbl_UOM.Location = New System.Drawing.Point(79, 206)
         Me.lbl_UOM.Name = "lbl_UOM"
         Me.lbl_UOM.Size = New System.Drawing.Size(39, 17)
         Me.lbl_UOM.TabIndex = 14
@@ -376,7 +386,7 @@ Partial Class form_manageProducts
         'lbl_location
         '
         Me.lbl_location.AutoSize = True
-        Me.lbl_location.Location = New System.Drawing.Point(79, 275)
+        Me.lbl_location.Location = New System.Drawing.Point(79, 259)
         Me.lbl_location.Name = "lbl_location"
         Me.lbl_location.Size = New System.Drawing.Size(59, 17)
         Me.lbl_location.TabIndex = 15
@@ -385,7 +395,7 @@ Partial Class form_manageProducts
         'lbl_price
         '
         Me.lbl_price.AutoSize = True
-        Me.lbl_price.Location = New System.Drawing.Point(426, 75)
+        Me.lbl_price.Location = New System.Drawing.Point(385, 59)
         Me.lbl_price.Name = "lbl_price"
         Me.lbl_price.Size = New System.Drawing.Size(37, 17)
         Me.lbl_price.TabIndex = 16
@@ -394,7 +404,7 @@ Partial Class form_manageProducts
         'lbl_tax
         '
         Me.lbl_tax.AutoSize = True
-        Me.lbl_tax.Location = New System.Drawing.Point(426, 123)
+        Me.lbl_tax.Location = New System.Drawing.Point(385, 107)
         Me.lbl_tax.Name = "lbl_tax"
         Me.lbl_tax.Size = New System.Drawing.Size(46, 17)
         Me.lbl_tax.TabIndex = 17
@@ -403,7 +413,7 @@ Partial Class form_manageProducts
         'lbl_totalPrice
         '
         Me.lbl_totalPrice.AutoSize = True
-        Me.lbl_totalPrice.Location = New System.Drawing.Point(431, 174)
+        Me.lbl_totalPrice.Location = New System.Drawing.Point(390, 158)
         Me.lbl_totalPrice.Name = "lbl_totalPrice"
         Me.lbl_totalPrice.Size = New System.Drawing.Size(70, 17)
         Me.lbl_totalPrice.TabIndex = 18
@@ -412,11 +422,71 @@ Partial Class form_manageProducts
         'lbl_barcode
         '
         Me.lbl_barcode.AutoSize = True
-        Me.lbl_barcode.Location = New System.Drawing.Point(426, 222)
+        Me.lbl_barcode.Location = New System.Drawing.Point(385, 206)
         Me.lbl_barcode.Name = "lbl_barcode"
         Me.lbl_barcode.Size = New System.Drawing.Size(57, 17)
         Me.lbl_barcode.TabIndex = 19
         Me.lbl_barcode.Text = "Barcode"
+        '
+        'btn_search
+        '
+        Me.btn_search.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_search.ForeColor = System.Drawing.Color.White
+        Me.btn_search.Location = New System.Drawing.Point(577, 30)
+        Me.btn_search.Name = "btn_search"
+        Me.btn_search.Size = New System.Drawing.Size(81, 26)
+        Me.btn_search.TabIndex = 20
+        Me.btn_search.Text = "SEARCH"
+        Me.btn_search.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(82, 322)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(125, 26)
+        Me.Button1.TabIndex = 21
+        Me.Button1.Text = "Save"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(227, 322)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(125, 26)
+        Me.Button2.TabIndex = 22
+        Me.Button2.Text = "Edit"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Maroon
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(374, 322)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(125, 26)
+        Me.Button3.TabIndex = 23
+        Me.Button3.Text = "Delete"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.Purple
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Location = New System.Drawing.Point(533, 322)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(125, 26)
+        Me.Button4.TabIndex = 24
+        Me.Button4.Text = "Clear"
+        Me.Button4.UseVisualStyleBackColor = False
         '
         'form_manageProducts
         '
@@ -479,4 +549,9 @@ Partial Class form_manageProducts
     Friend WithEvents lbl_proName As Label
     Friend WithEvents lbl_proCode As Label
     Friend WithEvents lbl_searchProCode As Label
+    Friend WithEvents btn_search As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
 End Class

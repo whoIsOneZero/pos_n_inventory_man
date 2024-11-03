@@ -137,6 +137,12 @@
     <Compile Include="admin\form_mainAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="admin\form_manageProducts.Designer.vb">
+      <DependentUpon>form_manageProducts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\form_manageProducts.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="admin\form_manageUser.Designer.vb">
       <DependentUpon>form_manageUser.vb</DependentUpon>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="admin\form_mainAdmin.resx">
       <DependentUpon>form_mainAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\form_manageProducts.resx">
+      <DependentUpon>form_manageProducts.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin\form_manageUser.resx">
       <DependentUpon>form_manageUser.vb</DependentUpon>
