@@ -125,6 +125,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\form_addGroup.Designer.vb">
+      <DependentUpon>form_addGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin\form_addGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="admin\form_changePassword.Designer.vb">
       <DependentUpon>form_changePassword.vb</DependentUpon>
     </Compile>
@@ -181,6 +187,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="admin\form_addGroup.resx">
+      <DependentUpon>form_addGroup.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin\form_changePassword.resx">
       <DependentUpon>form_changePassword.vb</DependentUpon>
     </EmbeddedResource>
