@@ -41,6 +41,8 @@ Public Class form_login
                 role = ""
             End If
 
+            dr.Close()  ' Close the DataReader after reading
+
             If found = True Then
                 If StrComp(txtUsername.Text, username, CompareMethod.Binary) Or StrComp(txtPassword.Text, password, CompareMethod.Binary) Then
                     MsgBox("Warning: wrong username or password!", vbExclamation)
@@ -61,8 +63,16 @@ Public Class form_login
             txtUsername.Clear()
 
         Catch ex As Exception
-            conn.Close()
+            ' conn.Close()
             MsgBox(ex.Message)
+        Finally
+            ' Ensure that both DataReader and connection are closed in the Finally block
+            If dr IsNot Nothing AndAlso Not dr.IsClosed Then
+                dr.Close()
+            End If
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
         End Try
     End Sub
 End Class
