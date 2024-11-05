@@ -210,7 +210,7 @@ Partial Class form_manageProducts
         Me.Column8.HeaderText = "STOCK"
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
-        Me.Column8.Width = 72
+        Me.Column8.Visible = False
         '
         'Column9
         '
@@ -220,7 +220,7 @@ Partial Class form_manageProducts
         Me.Column9.ReadOnly = True
         Me.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.Column9.Width = 92
+        Me.Column9.Visible = False
         '
         'Panel2
         '
@@ -556,17 +556,6 @@ Partial Class form_manageProducts
     Friend WithEvents tab_productList As TabPage
     Friend WithEvents tab_manageProducts As TabPage
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Column10 As DataGridViewTextBoxColumn
-    Friend WithEvents Column11 As DataGridViewTextBoxColumn
-    Friend WithEvents Column12 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column9 As DataGridViewImageColumn
     Friend WithEvents Panel2 As Panel
     Friend WithEvents txt_proName As TextBox
     Friend WithEvents txt_location As TextBox
@@ -596,4 +585,15 @@ Partial Class form_manageProducts
     Friend WithEvents btn_addProdGroup As Button
     Friend WithEvents lbl_searchProduct As Label
     Friend WithEvents txt_searchProductName As TextBox
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column10 As DataGridViewTextBoxColumn
+    Friend WithEvents Column11 As DataGridViewTextBoxColumn
+    Friend WithEvents Column12 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewImageColumn
 End Class

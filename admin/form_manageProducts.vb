@@ -3,13 +3,15 @@ Imports ZXing
 Imports System.Drawing
 
 Public Class form_manageProducts
-    Private Sub tab_manageProducts_Click(sender As Object, e As EventArgs) Handles tab_manageProducts.Click
+
+    Private Sub form_manageProducts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dbconn()
         load_ProductGroup()
+        load_Product()
     End Sub
 
     Private Sub btn_addProdGroup_Click(sender As Object, e As EventArgs) Handles btn_addProdGroup.Click
-        form_addGroup.Show()
+        form_addGroup.ShowDialog()
     End Sub
 
     Sub load_ProductGroup()
@@ -27,7 +29,24 @@ Public Class form_manageProducts
         conn.Close()
     End Sub
 
-    Sub Clear()
+    Sub load_Product()
+        DataGridView1.Rows.Clear()
+
+        Try
+            conn.Open()
+            cmd = New MySqlCommand("SELECT `procode`, `proname`, `progroup`, `uom`, `location`, `price`, `tax`, `totalprice`, `stock`, `barcode` FROM `tblproduct`", conn)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                DataGridView1.Rows.Add(DataGridView1.Rows.Count + 1, dr.Item("procode"), dr.Item("proname"), dr.Item("progroup"), dr.Item("uom"), dr.Item("location"), dr.Item("price"), dr.Item("tax"), dr.Item("totalprice"), dr.Item("stock"), dr.Item("barcode"))
+            End While
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        conn.Close()
+    End Sub
+
+    Sub clear()
         txt_proCode.Clear()
         txt_proName.Clear()
         txt_price.Clear()
@@ -84,7 +103,6 @@ Public Class form_manageProducts
 
             If i > 0 Then
                 MsgBox("New Product added!", MsgBoxStyle.Information, "Information")
-                Clear()
             Else
                 MsgBox("Failed to add new product.", MsgBoxStyle.Critical, "Error")
             End If
@@ -95,10 +113,14 @@ Public Class form_manageProducts
             MsgBox(ex.Message)
         End Try
         conn.Close()
-        Clear()
+        clear()
     End Sub
 
     Private Sub cmb_tax_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_tax.SelectedIndexChanged
-        txt_totalPrice.Text = CDec(txt_price.Text * cmb_tax.Text / 100) + txt_price.Text
+        Try
+            txt_totalPrice.Text = CDec(txt_price.Text * cmb_tax.Text / 100) + txt_price.Text
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class
