@@ -48,11 +48,11 @@ Public Class form_manageProducts
     End Sub
 
     Sub clear()
+        txt_location.Clear()
+        txt_price.Clear()
         txt_proCode.Clear()
         txt_proName.Clear()
-        txt_price.Clear()
-        txt_location.Clear()
-        txt_searchProCode.Clear()
+        txt_totalPrice.Clear()
         cmb_proGroup.SelectedIndex = -1
         cmb_tax.SelectedIndex = -1
         cmb_UOM.SelectedIndex = -1
