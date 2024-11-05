@@ -40,13 +40,13 @@ Partial Class form_manageProducts
         Me.Column9 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lbl_searchProduct = New System.Windows.Forms.Label()
-        Me.txt_searchProductName = New System.Windows.Forms.TextBox()
+        Me.txt_searchProduct = New System.Windows.Forms.TextBox()
         Me.tab_manageProducts = New System.Windows.Forms.TabPage()
         Me.btn_addProdGroup = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_clear = New System.Windows.Forms.Button()
+        Me.btn_delete = New System.Windows.Forms.Button()
+        Me.btn_update = New System.Windows.Forms.Button()
+        Me.btn_save = New System.Windows.Forms.Button()
         Me.btn_searchProCode = New System.Windows.Forms.Button()
         Me.lbl_barcode = New System.Windows.Forms.Label()
         Me.lbl_totalPrice = New System.Windows.Forms.Label()
@@ -225,7 +225,7 @@ Partial Class form_manageProducts
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.lbl_searchProduct)
-        Me.Panel2.Controls.Add(Me.txt_searchProductName)
+        Me.Panel2.Controls.Add(Me.txt_searchProduct)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(3, 3)
         Me.Panel2.Name = "Panel2"
@@ -241,20 +241,20 @@ Partial Class form_manageProducts
         Me.lbl_searchProduct.TabIndex = 12
         Me.lbl_searchProduct.Text = "Search"
         '
-        'txt_searchProductName
+        'txt_searchProduct
         '
-        Me.txt_searchProductName.Location = New System.Drawing.Point(113, 16)
-        Me.txt_searchProductName.Name = "txt_searchProductName"
-        Me.txt_searchProductName.Size = New System.Drawing.Size(472, 25)
-        Me.txt_searchProductName.TabIndex = 11
+        Me.txt_searchProduct.Location = New System.Drawing.Point(113, 16)
+        Me.txt_searchProduct.Name = "txt_searchProduct"
+        Me.txt_searchProduct.Size = New System.Drawing.Size(472, 25)
+        Me.txt_searchProduct.TabIndex = 11
         '
         'tab_manageProducts
         '
         Me.tab_manageProducts.Controls.Add(Me.btn_addProdGroup)
-        Me.tab_manageProducts.Controls.Add(Me.Button4)
-        Me.tab_manageProducts.Controls.Add(Me.Button3)
-        Me.tab_manageProducts.Controls.Add(Me.Button2)
-        Me.tab_manageProducts.Controls.Add(Me.Button1)
+        Me.tab_manageProducts.Controls.Add(Me.btn_clear)
+        Me.tab_manageProducts.Controls.Add(Me.btn_delete)
+        Me.tab_manageProducts.Controls.Add(Me.btn_update)
+        Me.tab_manageProducts.Controls.Add(Me.btn_save)
         Me.tab_manageProducts.Controls.Add(Me.btn_searchProCode)
         Me.tab_manageProducts.Controls.Add(Me.lbl_barcode)
         Me.tab_manageProducts.Controls.Add(Me.lbl_totalPrice)
@@ -297,53 +297,53 @@ Partial Class form_manageProducts
         Me.btn_addProdGroup.Text = "+"
         Me.btn_addProdGroup.UseVisualStyleBackColor = False
         '
-        'Button4
+        'btn_clear
         '
-        Me.Button4.BackColor = System.Drawing.Color.Purple
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(612, 344)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(125, 26)
-        Me.Button4.TabIndex = 24
-        Me.Button4.Text = "Clear"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btn_clear.BackColor = System.Drawing.Color.Purple
+        Me.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_clear.ForeColor = System.Drawing.Color.White
+        Me.btn_clear.Location = New System.Drawing.Point(612, 344)
+        Me.btn_clear.Name = "btn_clear"
+        Me.btn_clear.Size = New System.Drawing.Size(125, 26)
+        Me.btn_clear.TabIndex = 24
+        Me.btn_clear.Text = "Clear"
+        Me.btn_clear.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btn_delete
         '
-        Me.Button3.BackColor = System.Drawing.Color.Maroon
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(453, 344)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(125, 26)
-        Me.Button3.TabIndex = 23
-        Me.Button3.Text = "Delete"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btn_delete.BackColor = System.Drawing.Color.Maroon
+        Me.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_delete.ForeColor = System.Drawing.Color.White
+        Me.btn_delete.Location = New System.Drawing.Point(453, 344)
+        Me.btn_delete.Name = "btn_delete"
+        Me.btn_delete.Size = New System.Drawing.Size(125, 26)
+        Me.btn_delete.TabIndex = 23
+        Me.btn_delete.Text = "Delete"
+        Me.btn_delete.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btn_update
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(306, 344)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(125, 26)
-        Me.Button2.TabIndex = 22
-        Me.Button2.Text = "Edit"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btn_update.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_update.ForeColor = System.Drawing.Color.White
+        Me.btn_update.Location = New System.Drawing.Point(306, 344)
+        Me.btn_update.Name = "btn_update"
+        Me.btn_update.Size = New System.Drawing.Size(125, 26)
+        Me.btn_update.TabIndex = 22
+        Me.btn_update.Text = "Update"
+        Me.btn_update.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btn_save
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(161, 344)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(125, 26)
-        Me.Button1.TabIndex = 21
-        Me.Button1.Text = "Save"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_save.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_save.ForeColor = System.Drawing.Color.White
+        Me.btn_save.Location = New System.Drawing.Point(161, 344)
+        Me.btn_save.Name = "btn_save"
+        Me.btn_save.Size = New System.Drawing.Size(125, 26)
+        Me.btn_save.TabIndex = 21
+        Me.btn_save.Text = "Save"
+        Me.btn_save.UseVisualStyleBackColor = False
         '
         'btn_searchProCode
         '
@@ -578,13 +578,13 @@ Partial Class form_manageProducts
     Friend WithEvents lbl_proCode As Label
     Friend WithEvents lbl_searchProCode As Label
     Friend WithEvents btn_searchProCode As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_clear As Button
+    Friend WithEvents btn_delete As Button
+    Friend WithEvents btn_update As Button
+    Friend WithEvents btn_save As Button
     Friend WithEvents btn_addProdGroup As Button
     Friend WithEvents lbl_searchProduct As Label
-    Friend WithEvents txt_searchProductName As TextBox
+    Friend WithEvents txt_searchProduct As TextBox
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
