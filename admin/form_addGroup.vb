@@ -19,10 +19,10 @@ Public Class form_addGroup
             i = cmd.ExecuteNonQuery()
 
             If i > 0 Then
-                MsgBox("New Product Group Added", MsgBoxStyle.Information, "Information")
+                MsgBox("New Product Group added!", MsgBoxStyle.Information, "Information")
                 txt_newProGroup.Text = ""
             Else
-                MsgBox("Failed to add new product group", MsgBoxStyle.Critical, "Error")
+                MsgBox("Failed to add new product group.", MsgBoxStyle.Critical, "Error")
             End If
             txt_newProGroup.Clear()
 
@@ -30,5 +30,6 @@ Public Class form_addGroup
             MsgBox("Error: " & ex.Message)
         End Try
         conn.Close()
+        form_manageProducts.load_ProductGroup()
     End Sub
 End Class

@@ -39,8 +39,8 @@ Partial Class form_manageProducts
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.txt_searchProduct = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.lbl_searchProduct = New System.Windows.Forms.Label()
+        Me.txt_searchProductName = New System.Windows.Forms.TextBox()
         Me.tab_manageProducts = New System.Windows.Forms.TabPage()
         Me.btn_addProdGroup = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -66,7 +66,7 @@ Partial Class form_manageProducts
         Me.cmb_proGroup = New System.Windows.Forms.ComboBox()
         Me.txt_proName = New System.Windows.Forms.TextBox()
         Me.txt_location = New System.Windows.Forms.TextBox()
-        Me.txt_Price = New System.Windows.Forms.TextBox()
+        Me.txt_price = New System.Windows.Forms.TextBox()
         Me.txt_proCode = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.tab_productList.SuspendLayout()
@@ -224,29 +224,29 @@ Partial Class form_manageProducts
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.txt_searchProduct)
-        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Controls.Add(Me.lbl_searchProduct)
+        Me.Panel2.Controls.Add(Me.txt_searchProductName)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(3, 3)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(863, 53)
         Me.Panel2.TabIndex = 2
         '
-        'txt_searchProduct
+        'lbl_searchProduct
         '
-        Me.txt_searchProduct.AutoSize = True
-        Me.txt_searchProduct.Location = New System.Drawing.Point(59, 19)
-        Me.txt_searchProduct.Name = "txt_searchProduct"
-        Me.txt_searchProduct.Size = New System.Drawing.Size(48, 17)
-        Me.txt_searchProduct.TabIndex = 12
-        Me.txt_searchProduct.Text = "Search"
+        Me.lbl_searchProduct.AutoSize = True
+        Me.lbl_searchProduct.Location = New System.Drawing.Point(59, 19)
+        Me.lbl_searchProduct.Name = "lbl_searchProduct"
+        Me.lbl_searchProduct.Size = New System.Drawing.Size(48, 17)
+        Me.lbl_searchProduct.TabIndex = 12
+        Me.lbl_searchProduct.Text = "Search"
         '
-        'TextBox1
+        'txt_searchProductName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(113, 16)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(472, 25)
-        Me.TextBox1.TabIndex = 11
+        Me.txt_searchProductName.Location = New System.Drawing.Point(113, 16)
+        Me.txt_searchProductName.Name = "txt_searchProductName"
+        Me.txt_searchProductName.Size = New System.Drawing.Size(472, 25)
+        Me.txt_searchProductName.TabIndex = 11
         '
         'tab_manageProducts
         '
@@ -274,7 +274,7 @@ Partial Class form_manageProducts
         Me.tab_manageProducts.Controls.Add(Me.cmb_proGroup)
         Me.tab_manageProducts.Controls.Add(Me.txt_proName)
         Me.tab_manageProducts.Controls.Add(Me.txt_location)
-        Me.tab_manageProducts.Controls.Add(Me.txt_Price)
+        Me.tab_manageProducts.Controls.Add(Me.txt_price)
         Me.tab_manageProducts.Controls.Add(Me.txt_proCode)
         Me.tab_manageProducts.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tab_manageProducts.Location = New System.Drawing.Point(4, 50)
@@ -511,12 +511,12 @@ Partial Class form_manageProducts
         Me.txt_location.Size = New System.Drawing.Size(270, 25)
         Me.txt_location.TabIndex = 2
         '
-        'txt_Price
+        'txt_price
         '
-        Me.txt_Price.Location = New System.Drawing.Point(468, 87)
-        Me.txt_Price.Name = "txt_Price"
-        Me.txt_Price.Size = New System.Drawing.Size(270, 25)
-        Me.txt_Price.TabIndex = 1
+        Me.txt_price.Location = New System.Drawing.Point(468, 87)
+        Me.txt_price.Name = "txt_price"
+        Me.txt_price.Size = New System.Drawing.Size(270, 25)
+        Me.txt_price.TabIndex = 1
         '
         'txt_proCode
         '
@@ -570,7 +570,7 @@ Partial Class form_manageProducts
     Friend WithEvents Panel2 As Panel
     Friend WithEvents txt_proName As TextBox
     Friend WithEvents txt_location As TextBox
-    Friend WithEvents txt_Price As TextBox
+    Friend WithEvents txt_price As TextBox
     Friend WithEvents txt_proCode As TextBox
     Friend WithEvents cmb_UOM As ComboBox
     Friend WithEvents cmb_proGroup As ComboBox
@@ -594,6 +594,6 @@ Partial Class form_manageProducts
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents btn_addProdGroup As Button
-    Friend WithEvents txt_searchProduct As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents lbl_searchProduct As Label
+    Friend WithEvents txt_searchProductName As TextBox
 End Class
