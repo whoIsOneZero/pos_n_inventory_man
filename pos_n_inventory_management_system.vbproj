@@ -151,7 +151,6 @@
     <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
       <Private>True</Private>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
@@ -302,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="admin\form_manageUser.resx">
       <DependentUpon>form_manageUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier\form_mainCashier.resx">
+      <DependentUpon>form_mainCashier.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form_login.resx">
       <DependentUpon>form_login.vb</DependentUpon>
