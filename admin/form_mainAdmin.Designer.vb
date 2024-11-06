@@ -23,14 +23,14 @@ Partial Class form_mainAdmin
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btn_manageProducts = New System.Windows.Forms.Button()
-        Me.btn_manageStock = New System.Windows.Forms.Button()
-        Me.btn_manageUsers = New System.Windows.Forms.Button()
-        Me.btn_report = New System.Windows.Forms.Button()
-        Me.btn_logout = New System.Windows.Forms.Button()
-        Me.lbl_POS = New System.Windows.Forms.Label()
         Me.lbl_invSystem = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btn_logout = New System.Windows.Forms.Button()
+        Me.btn_report = New System.Windows.Forms.Button()
+        Me.btn_manageUsers = New System.Windows.Forms.Button()
+        Me.btn_manageStock = New System.Windows.Forms.Button()
+        Me.btn_manageProducts = New System.Windows.Forms.Button()
+        Me.lbl_POS = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -46,6 +46,16 @@ Partial Class form_mainAdmin
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(921, 88)
         Me.Panel1.TabIndex = 0
+        '
+        'lbl_invSystem
+        '
+        Me.lbl_invSystem.AutoSize = True
+        Me.lbl_invSystem.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_invSystem.Location = New System.Drawing.Point(17, 52)
+        Me.lbl_invSystem.Name = "lbl_invSystem"
+        Me.lbl_invSystem.Size = New System.Drawing.Size(116, 17)
+        Me.lbl_invSystem.TabIndex = 2
+        Me.lbl_invSystem.Text = "Inventory System"
         '
         'TableLayoutPanel1
         '
@@ -68,50 +78,20 @@ Partial Class form_mainAdmin
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(565, 82)
         Me.TableLayoutPanel1.TabIndex = 1
         '
-        'btn_manageProducts
+        'btn_logout
         '
-        Me.btn_manageProducts.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_manageProducts.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_manageProducts.FlatAppearance.BorderSize = 0
-        Me.btn_manageProducts.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack
-        Me.btn_manageProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_manageProducts.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_manageProducts.Location = New System.Drawing.Point(3, 3)
-        Me.btn_manageProducts.Name = "btn_manageProducts"
-        Me.btn_manageProducts.Size = New System.Drawing.Size(107, 76)
-        Me.btn_manageProducts.TabIndex = 1
-        Me.btn_manageProducts.Text = "Manage Products"
-        Me.btn_manageProducts.UseVisualStyleBackColor = True
-        '
-        'btn_manageStock
-        '
-        Me.btn_manageStock.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_manageStock.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_manageStock.FlatAppearance.BorderSize = 0
-        Me.btn_manageStock.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack
-        Me.btn_manageStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_manageStock.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_manageStock.Location = New System.Drawing.Point(116, 3)
-        Me.btn_manageStock.Name = "btn_manageStock"
-        Me.btn_manageStock.Size = New System.Drawing.Size(107, 76)
-        Me.btn_manageStock.TabIndex = 2
-        Me.btn_manageStock.Text = "Manage Stock"
-        Me.btn_manageStock.UseVisualStyleBackColor = True
-        '
-        'btn_manageUsers
-        '
-        Me.btn_manageUsers.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_manageUsers.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_manageUsers.FlatAppearance.BorderSize = 0
-        Me.btn_manageUsers.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack
-        Me.btn_manageUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_manageUsers.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_manageUsers.Location = New System.Drawing.Point(229, 3)
-        Me.btn_manageUsers.Name = "btn_manageUsers"
-        Me.btn_manageUsers.Size = New System.Drawing.Size(107, 76)
-        Me.btn_manageUsers.TabIndex = 3
-        Me.btn_manageUsers.Text = "Manage Users"
-        Me.btn_manageUsers.UseVisualStyleBackColor = True
+        Me.btn_logout.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_logout.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn_logout.FlatAppearance.BorderSize = 0
+        Me.btn_logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_logout.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_logout.Location = New System.Drawing.Point(455, 3)
+        Me.btn_logout.Name = "btn_logout"
+        Me.btn_logout.Size = New System.Drawing.Size(107, 76)
+        Me.btn_logout.TabIndex = 5
+        Me.btn_logout.Text = "Logout"
+        Me.btn_logout.UseVisualStyleBackColor = True
         '
         'btn_report
         '
@@ -128,20 +108,50 @@ Partial Class form_mainAdmin
         Me.btn_report.Text = "Report"
         Me.btn_report.UseVisualStyleBackColor = True
         '
-        'btn_logout
+        'btn_manageUsers
         '
-        Me.btn_logout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_logout.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_logout.FlatAppearance.BorderSize = 0
-        Me.btn_logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_logout.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_logout.Location = New System.Drawing.Point(455, 3)
-        Me.btn_logout.Name = "btn_logout"
-        Me.btn_logout.Size = New System.Drawing.Size(107, 76)
-        Me.btn_logout.TabIndex = 5
-        Me.btn_logout.Text = "Logout"
-        Me.btn_logout.UseVisualStyleBackColor = True
+        Me.btn_manageUsers.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageUsers.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn_manageUsers.FlatAppearance.BorderSize = 0
+        Me.btn_manageUsers.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack
+        Me.btn_manageUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_manageUsers.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_manageUsers.Location = New System.Drawing.Point(229, 3)
+        Me.btn_manageUsers.Name = "btn_manageUsers"
+        Me.btn_manageUsers.Size = New System.Drawing.Size(107, 76)
+        Me.btn_manageUsers.TabIndex = 3
+        Me.btn_manageUsers.Text = "Manage Users"
+        Me.btn_manageUsers.UseVisualStyleBackColor = True
+        '
+        'btn_manageStock
+        '
+        Me.btn_manageStock.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageStock.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn_manageStock.FlatAppearance.BorderSize = 0
+        Me.btn_manageStock.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack
+        Me.btn_manageStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_manageStock.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_manageStock.Location = New System.Drawing.Point(116, 3)
+        Me.btn_manageStock.Name = "btn_manageStock"
+        Me.btn_manageStock.Size = New System.Drawing.Size(107, 76)
+        Me.btn_manageStock.TabIndex = 2
+        Me.btn_manageStock.Text = "Manage Stock"
+        Me.btn_manageStock.UseVisualStyleBackColor = True
+        '
+        'btn_manageProducts
+        '
+        Me.btn_manageProducts.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_manageProducts.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn_manageProducts.FlatAppearance.BorderSize = 0
+        Me.btn_manageProducts.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack
+        Me.btn_manageProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_manageProducts.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_manageProducts.Location = New System.Drawing.Point(3, 3)
+        Me.btn_manageProducts.Name = "btn_manageProducts"
+        Me.btn_manageProducts.Size = New System.Drawing.Size(107, 76)
+        Me.btn_manageProducts.TabIndex = 1
+        Me.btn_manageProducts.Text = "Manage Products"
+        Me.btn_manageProducts.UseVisualStyleBackColor = True
         '
         'lbl_POS
         '
@@ -153,16 +163,6 @@ Partial Class form_mainAdmin
         Me.lbl_POS.Size = New System.Drawing.Size(74, 32)
         Me.lbl_POS.TabIndex = 1
         Me.lbl_POS.Text = "P O S"
-        '
-        'lbl_invSystem
-        '
-        Me.lbl_invSystem.AutoSize = True
-        Me.lbl_invSystem.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_invSystem.Location = New System.Drawing.Point(17, 52)
-        Me.lbl_invSystem.Name = "lbl_invSystem"
-        Me.lbl_invSystem.Size = New System.Drawing.Size(116, 17)
-        Me.lbl_invSystem.TabIndex = 2
-        Me.lbl_invSystem.Text = "Inventory System"
         '
         'Panel2
         '
