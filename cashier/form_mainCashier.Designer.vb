@@ -22,7 +22,8 @@ Partial Class form_mainCashier
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lbl_invSys2 = New System.Windows.Forms.Label()
         Me.lbl_invSys3 = New System.Windows.Forms.Label()
@@ -73,6 +74,9 @@ Partial Class form_mainCashier
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.lbl_subTotal = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -340,6 +344,8 @@ Partial Class form_mainCashier
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.lbl_subTotal)
+        Me.Panel3.Controls.Add(Me.Label10)
         Me.Panel3.Controls.Add(Me.cmb_payMode)
         Me.Panel3.Controls.Add(Me.txt_amountReceived)
         Me.Panel3.Controls.Add(Me.txt_discountPercent)
@@ -435,7 +441,7 @@ Partial Class form_mainCashier
         '
         Me.lbl_numItems.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_numItems.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lbl_numItems.Location = New System.Drawing.Point(141, 98)
+        Me.lbl_numItems.Location = New System.Drawing.Point(137, 70)
         Me.lbl_numItems.Name = "lbl_numItems"
         Me.lbl_numItems.Size = New System.Drawing.Size(111, 27)
         Me.lbl_numItems.TabIndex = 18
@@ -532,7 +538,7 @@ Partial Class form_mainCashier
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(20, 105)
+        Me.Label2.Location = New System.Drawing.Point(20, 76)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(83, 17)
         Me.Label2.TabIndex = 1
@@ -542,7 +548,7 @@ Partial Class form_mainCashier
         '
         Me.lbl_overallGrandTotal.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_overallGrandTotal.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lbl_overallGrandTotal.Location = New System.Drawing.Point(3, 25)
+        Me.lbl_overallGrandTotal.Location = New System.Drawing.Point(6, 3)
         Me.lbl_overallGrandTotal.Name = "lbl_overallGrandTotal"
         Me.lbl_overallGrandTotal.Size = New System.Drawing.Size(252, 51)
         Me.lbl_overallGrandTotal.TabIndex = 0
@@ -556,14 +562,14 @@ Partial Class form_mainCashier
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 157)
         Me.DataGridView1.Name = "DataGridView1"
@@ -601,7 +607,7 @@ Partial Class form_mainCashier
         Me.Column4.HeaderText = "Product Group"
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
-        Me.Column4.Width = 109
+        Me.Column4.Width = 119
         '
         'Column5
         '
@@ -650,6 +656,31 @@ Partial Class form_mainCashier
         Me.Column10.Name = "Column10"
         Me.Column10.ReadOnly = True
         Me.Column10.Width = 61
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
+        'lbl_subTotal
+        '
+        Me.lbl_subTotal.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_subTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lbl_subTotal.Location = New System.Drawing.Point(141, 103)
+        Me.lbl_subTotal.Name = "lbl_subTotal"
+        Me.lbl_subTotal.Size = New System.Drawing.Size(111, 27)
+        Me.lbl_subTotal.TabIndex = 27
+        Me.lbl_subTotal.Text = "00.00"
+        Me.lbl_subTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(20, 109)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(64, 17)
+        Me.Label10.TabIndex = 26
+        Me.Label10.Text = "Sub Total"
         '
         'form_mainCashier
         '
@@ -730,4 +761,7 @@ Partial Class form_mainCashier
     Friend WithEvents txt_discountPercent As TextBox
     Friend WithEvents txt_amountReceived As TextBox
     Friend WithEvents cmb_payMode As ComboBox
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents lbl_subTotal As Label
+    Friend WithEvents Label10 As Label
 End Class
