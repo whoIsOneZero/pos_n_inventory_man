@@ -126,4 +126,8 @@ Public Class form_mainCashier
         End Try
         conn.Close()
     End Sub
+
+    Private Sub btn_f3SetDiscount_Click(sender As Object, e As EventArgs) Handles btn_f3SetDiscount.Click
+        form_discount.ShowDialog()
+    End Sub
 End Class
