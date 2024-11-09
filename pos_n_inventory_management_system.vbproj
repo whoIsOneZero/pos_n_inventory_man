@@ -252,6 +252,12 @@
     <Compile Include="admin\form_manageUser.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="cashier\form_discount.Designer.vb">
+      <DependentUpon>form_discount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cashier\form_discount.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="cashier\form_mainCashier.Designer.vb">
       <DependentUpon>form_mainCashier.vb</DependentUpon>
     </Compile>
@@ -301,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="admin\form_manageUser.resx">
       <DependentUpon>form_manageUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cashier\form_discount.resx">
+      <DependentUpon>form_discount.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cashier\form_mainCashier.resx">
       <DependentUpon>form_mainCashier.vb</DependentUpon>

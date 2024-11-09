@@ -23,7 +23,7 @@ Partial Class form_mainCashier
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lbl_invSys2 = New System.Windows.Forms.Label()
         Me.lbl_invSys3 = New System.Windows.Forms.Label()
@@ -45,6 +45,9 @@ Partial Class form_mainCashier
         Me.btn_f2Cancel = New System.Windows.Forms.Button()
         Me.btn_f1New = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.lbl_totalTax = New System.Windows.Forms.Label()
+        Me.lbl_subTotal = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.cmb_payMode = New System.Windows.Forms.ComboBox()
         Me.txt_amountReceived = New System.Windows.Forms.TextBox()
         Me.txt_discountPercent = New System.Windows.Forms.TextBox()
@@ -75,8 +78,6 @@ Partial Class form_mainCashier
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.lbl_subTotal = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -344,6 +345,7 @@ Partial Class form_mainCashier
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.lbl_totalTax)
         Me.Panel3.Controls.Add(Me.lbl_subTotal)
         Me.Panel3.Controls.Add(Me.Label10)
         Me.Panel3.Controls.Add(Me.cmb_payMode)
@@ -370,6 +372,38 @@ Partial Class form_mainCashier
         Me.Panel3.Size = New System.Drawing.Size(285, 450)
         Me.Panel3.TabIndex = 3
         '
+        'lbl_totalTax
+        '
+        Me.lbl_totalTax.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_totalTax.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lbl_totalTax.Location = New System.Drawing.Point(141, 164)
+        Me.lbl_totalTax.Name = "lbl_totalTax"
+        Me.lbl_totalTax.Size = New System.Drawing.Size(111, 27)
+        Me.lbl_totalTax.TabIndex = 28
+        Me.lbl_totalTax.Text = "00.00"
+        Me.lbl_totalTax.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lbl_subTotal
+        '
+        Me.lbl_subTotal.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_subTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lbl_subTotal.Location = New System.Drawing.Point(141, 100)
+        Me.lbl_subTotal.Name = "lbl_subTotal"
+        Me.lbl_subTotal.Size = New System.Drawing.Size(111, 27)
+        Me.lbl_subTotal.TabIndex = 27
+        Me.lbl_subTotal.Text = "00.00"
+        Me.lbl_subTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(20, 109)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(64, 17)
+        Me.Label10.TabIndex = 26
+        Me.Label10.Text = "Sub Total"
+        '
         'cmb_payMode
         '
         Me.cmb_payMode.FormattingEnabled = True
@@ -388,6 +422,8 @@ Partial Class form_mainCashier
         '
         'txt_discountPercent
         '
+        Me.txt_discountPercent.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_discountPercent.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.txt_discountPercent.Location = New System.Drawing.Point(97, 204)
         Me.txt_discountPercent.Name = "txt_discountPercent"
         Me.txt_discountPercent.Size = New System.Drawing.Size(38, 25)
@@ -430,7 +466,7 @@ Partial Class form_mainCashier
         '
         Me.lbl_totalPrice.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_totalPrice.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lbl_totalPrice.Location = New System.Drawing.Point(141, 140)
+        Me.lbl_totalPrice.Location = New System.Drawing.Point(141, 131)
         Me.lbl_totalPrice.Name = "lbl_totalPrice"
         Me.lbl_totalPrice.Size = New System.Drawing.Size(111, 27)
         Me.lbl_totalPrice.TabIndex = 19
@@ -441,7 +477,7 @@ Partial Class form_mainCashier
         '
         Me.lbl_numItems.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_numItems.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lbl_numItems.Location = New System.Drawing.Point(137, 70)
+        Me.lbl_numItems.Location = New System.Drawing.Point(141, 70)
         Me.lbl_numItems.Name = "lbl_numItems"
         Me.lbl_numItems.Size = New System.Drawing.Size(111, 27)
         Me.lbl_numItems.TabIndex = 18
@@ -562,14 +598,14 @@ Partial Class form_mainCashier
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 157)
         Me.DataGridView1.Name = "DataGridView1"
@@ -607,7 +643,7 @@ Partial Class form_mainCashier
         Me.Column4.HeaderText = "Product Group"
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
-        Me.Column4.Width = 119
+        Me.Column4.Width = 109
         '
         'Column5
         '
@@ -660,27 +696,6 @@ Partial Class form_mainCashier
         'Timer1
         '
         Me.Timer1.Enabled = True
-        '
-        'lbl_subTotal
-        '
-        Me.lbl_subTotal.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_subTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.lbl_subTotal.Location = New System.Drawing.Point(141, 103)
-        Me.lbl_subTotal.Name = "lbl_subTotal"
-        Me.lbl_subTotal.Size = New System.Drawing.Size(111, 27)
-        Me.lbl_subTotal.TabIndex = 27
-        Me.lbl_subTotal.Text = "00.00"
-        Me.lbl_subTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(20, 109)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(64, 17)
-        Me.Label10.TabIndex = 26
-        Me.Label10.Text = "Sub Total"
         '
         'form_mainCashier
         '
@@ -764,4 +779,5 @@ Partial Class form_mainCashier
     Friend WithEvents Timer1 As Timer
     Friend WithEvents lbl_subTotal As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents lbl_totalTax As Label
 End Class

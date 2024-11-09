@@ -6,6 +6,7 @@ Public Class form_mainCashier
         DataGridView1.RowTemplate.Height = 30
         txt_searchProductOrBarcode.Focus()
         total()
+        load_discount()
     End Sub
 
     Public Sub ADDLIST()
@@ -92,14 +93,37 @@ Public Class form_mainCashier
 
         Try
             lbl_subTotal.Text = Format(CDec(subTotal), "#,##0.00")
-            lbl_tax.Text = Format(CDec(tax), "#,##0.00")
-            lbl_total.Text = Format(CDec(sum), "#,##0.00")
-        Catch ex As Exception
+            lbl_totalTax.Text = Format(CDec(tax), "#,##0.00")
+            lbl_totalPrice.Text = Format(CDec(subTotal + tax), "#,##0.00")
+            lbl_discount.Text = Format(CDec(txt_discountPercent.Text * lbl_totalPrice.Text / 100), "#,##0.00")
+            lbl_grandTotal.Text = Format(CDec(lbl_totalPrice.Text - lbl_discount.Text), "#,##0.00")
+            lbl_overallGrandTotal.Text = Format(CDec(lbl_grandTotal.Text), "#,##0.00")
 
+        Catch ex As Exception
+            ' MsgBox(ex.Message)
         End Try
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         total()
+    End Sub
+
+    Private Sub txt_amountReceived_TextChanged(sender As Object, e As EventArgs) Handles txt_amountReceived.TextChanged
+        lbl_change.Text = Format(CDec(txt_amountReceived.Text - lbl_grandTotal.Text), "#,##0.00")
+    End Sub
+
+    Sub load_discount()
+        Try
+            conn.Open()
+            cmd = New MySqlCommand("SELECT * FROM `tbldiscount`", conn)
+            dr = cmd.ExecuteReader
+
+            While dr.Read
+                txt_discountPercent.Text = dr.Item("discount")
+            End While
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        conn.Close()
     End Sub
 End Class
