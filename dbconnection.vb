@@ -18,5 +18,25 @@ Module dbconnection
             MsgBox("Server not connected!", vbExclamation)
         End Try
         Return result
+
+    End Function
+
+    Public Function getBillNo() As String
+        Try
+            conn.Open()
+            cmd = New MySqlCommand("SELECT * FROM `billno` order by id desc", conn)
+            dr = cmd.ExecuteReader
+            dr.Read()
+
+            If dr.HasRows Then
+                getBillNo = CLng(dr.Item("billno").ToString) + 1
+            Else
+                getBillNo = Date.Now.ToString("yyyy") & "1"
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        conn.Close()
     End Function
 End Module

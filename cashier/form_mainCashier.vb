@@ -6,7 +6,10 @@ Public Class form_mainCashier
         DataGridView1.RowTemplate.Height = 30
         txt_searchProductOrBarcode.Focus()
         total()
+        btn_f9Pay.Enabled = False
         load_discount()
+
+        txt_billNum.Text = getBillNo()
     End Sub
 
     Public Sub ADDLIST()
@@ -110,6 +113,7 @@ Public Class form_mainCashier
 
     Private Sub txt_amountReceived_TextChanged(sender As Object, e As EventArgs) Handles txt_amountReceived.TextChanged
         lbl_change.Text = Format(CDec(txt_amountReceived.Text - lbl_grandTotal.Text), "#,##0.00")
+        btn_f9Pay.Enabled = True
     End Sub
 
     Sub load_discount()
