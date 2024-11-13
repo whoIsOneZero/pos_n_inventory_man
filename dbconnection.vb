@@ -24,7 +24,7 @@ Module dbconnection
     Public Function getBillNo() As String
         Try
             conn.Open()
-            cmd = New MySqlCommand("SELECT * FROM `billno` order by id desc", conn)
+            cmd = New MySqlCommand("SELECT * FROM `tblpos` WHERE `billno` order by id desc", conn)
             dr = cmd.ExecuteReader
             dr.Read()
 

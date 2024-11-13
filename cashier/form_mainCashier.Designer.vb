@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class form_mainCashier
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,13 +20,13 @@ Partial Class form_mainCashier
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lbl_invSys2 = New System.Windows.Forms.Label()
-        Me.lbl_invSys3 = New System.Windows.Forms.Label()
+        Me.lbl_loginUser = New System.Windows.Forms.Label()
+        Me.lbl_loginTime = New System.Windows.Forms.Label()
         Me.lbl_invSys1 = New System.Windows.Forms.Label()
         Me.lbl_POS = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -78,6 +78,9 @@ Partial Class form_mainCashier
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.lbl_time = New System.Windows.Forms.Label()
+        Me.lbl_date = New System.Windows.Forms.Label()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -87,35 +90,36 @@ Partial Class form_mainCashier
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.lbl_invSys2)
-        Me.Panel1.Controls.Add(Me.lbl_invSys3)
+        Me.Panel1.Controls.Add(Me.lbl_time)
+        Me.Panel1.Controls.Add(Me.lbl_loginUser)
+        Me.Panel1.Controls.Add(Me.lbl_loginTime)
         Me.Panel1.Controls.Add(Me.lbl_invSys1)
         Me.Panel1.Controls.Add(Me.lbl_POS)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(998, 58)
+        Me.Panel1.Size = New System.Drawing.Size(998, 68)
         Me.Panel1.TabIndex = 0
         '
-        'lbl_invSys2
+        'lbl_loginUser
         '
-        Me.lbl_invSys2.AutoSize = True
-        Me.lbl_invSys2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_invSys2.Location = New System.Drawing.Point(671, 8)
-        Me.lbl_invSys2.Name = "lbl_invSys2"
-        Me.lbl_invSys2.Size = New System.Drawing.Size(116, 17)
-        Me.lbl_invSys2.TabIndex = 8
-        Me.lbl_invSys2.Text = "Inventory System"
+        Me.lbl_loginUser.AutoSize = True
+        Me.lbl_loginUser.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_loginUser.Location = New System.Drawing.Point(629, 15)
+        Me.lbl_loginUser.Name = "lbl_loginUser"
+        Me.lbl_loginUser.Size = New System.Drawing.Size(116, 17)
+        Me.lbl_loginUser.TabIndex = 8
+        Me.lbl_loginUser.Text = "Inventory System"
         '
-        'lbl_invSys3
+        'lbl_loginTime
         '
-        Me.lbl_invSys3.AutoSize = True
-        Me.lbl_invSys3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_invSys3.Location = New System.Drawing.Point(671, 31)
-        Me.lbl_invSys3.Name = "lbl_invSys3"
-        Me.lbl_invSys3.Size = New System.Drawing.Size(116, 17)
-        Me.lbl_invSys3.TabIndex = 7
-        Me.lbl_invSys3.Text = "Inventory System"
+        Me.lbl_loginTime.AutoSize = True
+        Me.lbl_loginTime.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_loginTime.Location = New System.Drawing.Point(629, 38)
+        Me.lbl_loginTime.Name = "lbl_loginTime"
+        Me.lbl_loginTime.Size = New System.Drawing.Size(116, 17)
+        Me.lbl_loginTime.TabIndex = 7
+        Me.lbl_loginTime.Text = "Inventory System"
         '
         'lbl_invSys1
         '
@@ -140,6 +144,7 @@ Partial Class form_mainCashier
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.lbl_date)
         Me.Panel2.Controls.Add(Me.dtp_billDate)
         Me.Panel2.Controls.Add(Me.txt_searchProductOrBarcode)
         Me.Panel2.Controls.Add(Me.txt_billNum)
@@ -148,7 +153,7 @@ Partial Class form_mainCashier
         Me.Panel2.Controls.Add(Me.lbl_billNum)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.ForeColor = System.Drawing.Color.Black
-        Me.Panel2.Location = New System.Drawing.Point(0, 58)
+        Me.Panel2.Location = New System.Drawing.Point(0, 68)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(998, 99)
         Me.Panel2.TabIndex = 1
@@ -367,9 +372,9 @@ Partial Class form_mainCashier
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.lbl_overallGrandTotal)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel3.Location = New System.Drawing.Point(713, 157)
+        Me.Panel3.Location = New System.Drawing.Point(713, 167)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(285, 450)
+        Me.Panel3.Size = New System.Drawing.Size(285, 440)
         Me.Panel3.TabIndex = 3
         '
         'lbl_totalTax
@@ -493,7 +498,7 @@ Partial Class form_mainCashier
         Me.btn_f9Pay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_f9Pay.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_f9Pay.ForeColor = System.Drawing.Color.White
-        Me.btn_f9Pay.Location = New System.Drawing.Point(0, 408)
+        Me.btn_f9Pay.Location = New System.Drawing.Point(0, 398)
         Me.btn_f9Pay.Name = "btn_f9Pay"
         Me.btn_f9Pay.Size = New System.Drawing.Size(285, 42)
         Me.btn_f9Pay.TabIndex = 17
@@ -595,18 +600,18 @@ Partial Class form_mainCashier
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.Location = New System.Drawing.Point(0, 157)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -697,6 +702,34 @@ Partial Class form_mainCashier
         '
         Me.Timer1.Enabled = True
         '
+        'lbl_time
+        '
+        Me.lbl_time.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_time.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_time.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lbl_time.Location = New System.Drawing.Point(773, 8)
+        Me.lbl_time.Name = "lbl_time"
+        Me.lbl_time.Size = New System.Drawing.Size(213, 47)
+        Me.lbl_time.TabIndex = 9
+        Me.lbl_time.Text = "00.00"
+        Me.lbl_time.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lbl_date
+        '
+        Me.lbl_date.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_date.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_date.ForeColor = System.Drawing.Color.Cyan
+        Me.lbl_date.Location = New System.Drawing.Point(831, 3)
+        Me.lbl_date.Name = "lbl_date"
+        Me.lbl_date.Size = New System.Drawing.Size(155, 51)
+        Me.lbl_date.TabIndex = 11
+        Me.lbl_date.Text = "00.00"
+        Me.lbl_date.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Timer2
+        '
+        Me.Timer2.Enabled = True
+        '
         'form_mainCashier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -746,8 +779,8 @@ Partial Class form_mainCashier
     Friend WithEvents lbl_productOrBarcode As Label
     Friend WithEvents lbl_billNum As Label
     Friend WithEvents lbl_invSys1 As Label
-    Friend WithEvents lbl_invSys2 As Label
-    Friend WithEvents lbl_invSys3 As Label
+    Friend WithEvents lbl_loginUser As Label
+    Friend WithEvents lbl_loginTime As Label
     Friend WithEvents txt_searchProductOrBarcode As TextBox
     Friend WithEvents txt_billNum As TextBox
     Friend WithEvents dtp_billDate As DateTimePicker
@@ -780,4 +813,7 @@ Partial Class form_mainCashier
     Friend WithEvents lbl_subTotal As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents lbl_totalTax As Label
+    Friend WithEvents lbl_time As Label
+    Friend WithEvents lbl_date As Label
+    Friend WithEvents Timer2 As Timer
 End Class

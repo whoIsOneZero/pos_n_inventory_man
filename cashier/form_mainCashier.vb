@@ -112,7 +112,11 @@ Public Class form_mainCashier
     End Sub
 
     Private Sub txt_amountReceived_TextChanged(sender As Object, e As EventArgs) Handles txt_amountReceived.TextChanged
-        lbl_change.Text = Format(CDec(txt_amountReceived.Text - lbl_grandTotal.Text), "#,##0.00")
+        Try
+            lbl_change.Text = Format(CDec(txt_amountReceived.Text - lbl_grandTotal.Text), "#,##0.00")
+        Catch ex As Exception
+
+        End Try
         btn_f9Pay.Enabled = True
     End Sub
 
@@ -133,5 +137,90 @@ Public Class form_mainCashier
 
     Private Sub btn_f3SetDiscount_Click(sender As Object, e As EventArgs) Handles btn_f3SetDiscount.Click
         form_discount.ShowDialog()
+    End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        lbl_time.Text = Date.Now.ToString("hh:mm:ss tt")
+        lbl_date.Text = Date.Now.ToString("dd-MMMM-yyyy dddd")
+    End Sub
+
+    Sub save_bill()
+        If cmb_payMode.Text = String.Empty Then
+            MsgBox("Please select a payment mode.", vbInformation)
+            Return
+        ElseIf txt_amountReceived.Text = String.Empty Then
+            MsgBox("Please enter received amount.", vbInformation)
+            Return
+        ElseIf lbl_grandTotal.Text > txt_amountReceived.Text Then
+            MsgBox("Not enough balance.", vbExclamation)
+            Return
+        Else
+            Try
+                conn.Open()
+                For j As Integer = 0 To DataGridView1.Rows.Count - 1 Step +1
+                    cmd = New MySqlCommand("INSERT INTO `tblpos`(`billno`, `billdate`, `bmonth`, `bmonthyear`, `procode`, `proname`, `progroup`, `uom`, `price`, `tax`, `totalproductprice`, `qty`, `totalpriceqty`, `subtotal`, `totaltax`, `discount`, `grandtotal`, `paymode`, `receiveamount`, `balance`) VALUES (@billno, @billdate, @bmonth, @bmonthyear, @procode, @proname, @progroup, @uom, @price, @tax, @totalproductprice, @qty, @totalpriceqty, @subtotal, totaltax, @discount, @grandtotal, @paymode, @receiveamount, @balance)", conn)
+                    cmd.Parameters.Clear()
+                    cmd.Parameters.AddWithValue("@billno", txt_billNum.Text)
+                    cmd.Parameters.AddWithValue("@billdate", CDate(dtp_billDate.Text))
+                    cmd.Parameters.AddWithValue("@bmonth", Date.Now.ToString("MMMM"))
+                    cmd.Parameters.AddWithValue("@bmonthyear", Date.Now.ToString("MMMM-yyyy"))
+
+                    cmd.Parameters.AddWithValue("@procode", DataGridView1.Rows(j).Cells(1).Value)
+                    cmd.Parameters.AddWithValue("@proname", DataGridView1.Rows(j).Cells(2).Value)
+                    cmd.Parameters.AddWithValue("@progroup", DataGridView1.Rows(j).Cells(3).Value)
+                    cmd.Parameters.AddWithValue("@uom", DataGridView1.Rows(j).Cells(4).Value)
+                    cmd.Parameters.AddWithValue("@price", DataGridView1.Rows(j).Cells(5).Value)
+                    cmd.Parameters.AddWithValue("@tax", DataGridView1.Rows(j).Cells(6).Value)
+                    cmd.Parameters.AddWithValue("@totalproductprice", DataGridView1.Rows(j).Cells(7).Value)
+                    cmd.Parameters.AddWithValue("@qty", DataGridView1.Rows(j).Cells(8).Value)
+                    cmd.Parameters.AddWithValue("@totalpriceqty", DataGridView1.Rows(j).Cells(9).Value)
+
+                    cmd.Parameters.AddWithValue("@subtotal", lbl_subTotal.Text)
+                    cmd.Parameters.AddWithValue("@totaltax", lbl_totalTax.Text)
+                    cmd.Parameters.AddWithValue("@totalprice", lbl_totalPrice.Text)
+                    cmd.Parameters.AddWithValue("@discount", lbl_discount.Text)
+                    cmd.Parameters.AddWithValue("@grandtotal", lbl_grandTotal.Text)
+                    cmd.Parameters.AddWithValue("@paymode", cmb_payMode.Text)
+                    cmd.Parameters.AddWithValue("@receiveamount", txt_amountReceived.Text)
+                    cmd.Parameters.AddWithValue("@balance", lbl_change.Text)
+
+                    i = cmd.ExecuteNonQuery
+                Next
+                If i > 0 Then
+                    MsgBox("Bill saved succesfully." & vbNewLine & "Bill No: " & txt_billNum.Text, vbInformation)
+                    clear()
+                Else
+                    MsgBox("Bill save failed!" & vbNewLine & "Bill No: " & txt_billNum.Text, vbExclamation)
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
+
+        conn.Close()
+    End Sub
+
+    Sub clear()
+        txt_billNum.Text = getBillNo()
+        dtp_billDate.Text = Now
+        txt_searchProductOrBarcode.Clear()
+        DataGridView1.Rows.Clear()
+        lbl_subTotal.Text = "0.00"
+        lbl_totalTax.Text = "0.00"
+        lbl_totalPrice.Text = "0.00"
+        lbl_discount.Text = "0.00"
+        lbl_grandTotal.Text = "0.00"
+        lbl_numItems.Text = "0"
+        lbl_overallGrandTotal.Text = "0.00"
+        txt_amountReceived.Clear()
+        lbl_change.Text = "0.00"
+        cmb_payMode.SelectedIndex = -1
+
+    End Sub
+
+    Private Sub btn_f9Pay_Click(sender As Object, e As EventArgs) Handles btn_f9Pay.Click
+        save_bill()
+        ' clear()
+        txt_searchProductOrBarcode.Focus()
     End Sub
 End Class
