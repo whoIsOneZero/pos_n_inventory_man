@@ -198,10 +198,12 @@ Public Class form_mainCashier
         End If
 
         conn.Close()
+        txt_billNum.Text = getBillNo()
+
     End Sub
 
     Sub clear()
-        txt_billNum.Text = getBillNo()
+        ' txt_billNum.Text = getBillNo()
         dtp_billDate.Text = Now
         txt_searchProductOrBarcode.Clear()
         DataGridView1.Rows.Clear()
@@ -220,7 +222,25 @@ Public Class form_mainCashier
 
     Private Sub btn_f9Pay_Click(sender As Object, e As EventArgs) Handles btn_f9Pay.Click
         save_bill()
-        ' clear()
         txt_searchProductOrBarcode.Focus()
+    End Sub
+
+    Private Sub btn_f1New_Click(sender As Object, e As EventArgs) Handles btn_f1New.Click
+        clear()
+        txt_billNum.Text = getBillNo()
+
+    End Sub
+
+    Private Sub btn_f5Remove_Click(sender As Object, e As EventArgs) Handles btn_f5Remove.Click
+        DataGridView1.Rows.Remove(DataGridView1.SelectedRows.Item(0))
+    End Sub
+
+    Private Sub btn_f6changePassword_Click(sender As Object, e As EventArgs) Handles btn_f6changePassword.Click
+        form_changePassword.ShowDialog()
+    End Sub
+
+    Private Sub btn_f7Logout_Click(sender As Object, e As EventArgs) Handles btn_f7Logout.Click
+        Me.Close()
+        form_login.ShowDialog()
     End Sub
 End Class
